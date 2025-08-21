@@ -19,7 +19,9 @@ export class HeaderInterceptor implements HttpInterceptor {
     const token: string | null = this.securityService.getToken();
     if (
       token &&
-      (request.url.includes('cart') || request.url.includes('orders'))
+      (request.url.includes('cart') ||
+        request.url.includes('orders') ||
+        request.url.includes('wishlist'))
     ) {
       request = request.clone({
         setHeaders: { token },

@@ -68,5 +68,11 @@
     "CITY": "City",
     "CASH": "Cash",
     "ONLINE": "Online"
+  },
+  "WISHLIST": {
+    "TITLE": "Wish List",
+    "EMPTY": "Your Wish List is Empty",
+    "GO_TO_PRODUCTS": "Go to Products",
+    "REMOVE_ITEM": "Remove Item"
   }
 }

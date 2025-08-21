@@ -68,6 +68,13 @@ const routes: Routes = [
         loadChildren: () =>
           import('./modules/orders/orders.module').then((m) => m.OrdersModule),
       },
+      {
+        path: 'wishList',
+        loadChildren: () =>
+          import('./modules/wish-list/wish-list.module').then(
+            (m) => m.WishListModule
+          ),
+      },
     ],
   },
   { path: '**', component: NotfoundComponent },

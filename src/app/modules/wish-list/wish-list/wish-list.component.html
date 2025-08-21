@@ -1,0 +1,52 @@
+<section>
+  <div class="row g-3 my-2">
+    <div class="col-md-3" *ngFor="let product of wishListItems?.data">
+      <div class="p-2 product shadow-sm">
+        <div class="cursor-pointer position-relative">
+          <i
+            (click)="removeFromWishList(product.id)"
+            [class]="
+              wishListService.isInWishList(product.id)
+                ? 'fa-solid fa-heart text-danger position-absolute top-0 end-0 fs-4'
+                : 'fa-regular fa-heart position-absolute top-0 end-0 fs-4'
+            "
+          ></i>
+          <div [routerLink]="['/product', product.id]">
+            <img
+              [src]="product.imageCover"
+              alt="product image"
+              class="w-100"
+              height="300px"
+            />
+            <h5 class="text-main">{{ product.title | sliceText }}</h5>
+            <h6>{{ product.category.name }}</h6>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="text-muted">
+                {{ "PRODUCT.PRICE" | translate }}:
+                {{ product.price | currency }}
+              </span>
+              <span class="text-success">
+                {{ product.ratingsAverage }}
+                <i class="fa-solid fa-star text-warning"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    *ngIf="!loading.isLoading && wishListItems.count == 0"
+    class="p-3 mb-5 rounded my-3"
+  >
+    <h4 class="text-center text-main fw-bold">
+      {{ "WISHLIST.EMPTY" | translate }}
+    </h4>
+    <div class="text-center">
+      <a routerLink="/products" class="btn btn-outline-info">
+        {{ "WISHLIST.GO_TO_PRODUCTS" | translate }}
+      </a>
+    </div>
+  </div>
+</section>
