@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+// Vendors
+@import "./assets/scss/vendor/bootstrap";
+@import "./assets/scss/vendor/fontawesome";
+@import "./assets/scss/vendor/toastr";
+@import "./assets/scss/vendor/spinner";
+
+// abstracts
+@import "./assets/scss/abstracts/variables";
+@import "./assets/scss/abstracts/mixins";
+@import "./assets/scss/abstracts/functions";
+
+// base
+@import "./assets/scss/base/reset";
+@import "./assets/scss/base/typography";
+
+// layout
+@import "./assets/scss/layout/navigation";
+
+// components
+@import "./assets/scss/components/buttons";
+@import "./assets/scss/components/products";
+
+// utilities
+@import "./assets/scss/utilities/helpers";
+@import "./assets/scss/utilities/sections";

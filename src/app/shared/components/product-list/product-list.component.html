@@ -1,0 +1,24 @@
+<section>
+  <div>
+    <input
+      type="search"
+      [placeholder]="'PRODUCT.SEARCH_PLACEHOLDER' | translate"
+      [(ngModel)]="searchTerm"
+      class="form-control my-3 section-box m-auto"
+      aria-label="Search Products"
+    />
+  </div>
+  <div>
+    <div class="row g-3 my-2">
+      <div
+        class="col-md-3"
+        *ngFor="let product of displayProducts | search : searchTerm"
+      >
+        <app-product-card [product]="product"></app-product-card>
+      </div>
+    </div>
+    <div class="text-center" *ngIf="displayProducts.length === 0 && !loading">
+      <p class="text-muted">{{ "PRODUCT.NO_PRODUCTS" | translate }}</p>
+    </div>
+  </div>
+</section>

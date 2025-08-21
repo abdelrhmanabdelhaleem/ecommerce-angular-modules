@@ -1,0 +1,72 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "PRODUCTS": "Products",
+    "CATEGORIES": "Categories",
+    "CART": "Cart",
+    "LANG": "Lang",
+    "LOGIN": "تسجيل الدخول",
+    "REGISTER": "إنشاء حساب",
+    "LOGOUT": "Sign Out"
+  },
+
+  "PRODUCT": {
+    "ADD_TO_CART": "Add to Cart",
+    "VIEW_DETAILS": "View Details",
+    "PRICE": "Price",
+    "QUANTITY": "Quantity",
+    "TOTAL": "Total",
+    "DESCRIPTION": "Description",
+    "REVIEWS": "Reviews",
+    "POPULAR_PRODUCTS": "Popular Products",
+    "SEARCH_PLACEHOLDER": "Search products",
+    "NO_PRODUCTS": "No products found."
+  },
+
+  "AUTH": {
+    "LOGIN": "Login",
+    "REGISTER": "Register",
+    "LOGOUT": "Logout",
+    "FORGOT_PASSWORD": "Forgot Password?",
+    "RESET_PASSWORD": "Reset Password",
+    "LOGIN_FORM": "Login Form",
+    "REGISTER_FORM": "Register Form",
+    "EMAIL": "Email",
+    "EMAIL_REQUIRED": "Email is required",
+    "EMAIL_INVALID": "Enter valid email",
+    "PASSWORD": "Password",
+    "PASSWORD_REQUIRED": "Password is required",
+    "PASSWORD_PATTERN": "Must be at least 6 chars",
+    "NAME": "Name",
+    "NAME_REQUIRED": "Name is required",
+    "NAME_MIN": "Name Min Length 3",
+    "NAME_MAX": "Name Max Length 25",
+    "RE_PASSWORD": "Confirm Password",
+    "PASSWORD_CONFIRM_ERROR": "Password confirmation is incorrect",
+    "PHONE": "Phone",
+    "PHONE_REQUIRED": "Phone is required",
+    "PHONE_INVALID": "Accept only Egypt phone numbers",
+    "NO_ACCOUNT": "Don't have an account?",
+    "GO_TO_REGISTER": "Go to Register",
+    "HAVE_ACCOUNT": "Already have an account?",
+    "GO_TO_LOGIN": "Go to Login"
+  },
+  "CART": {
+    "TITLE": "Your Cart",
+    "TOTAL_PRICE": "Total Price",
+    "CLEAR": "Clear Cart",
+    "EMPTY": "Your Cart is Empty",
+    "GO_TO_PRODUCTS": "Go to Products",
+    "GO_TO_PAYMENT": "Go To Payment",
+    "INCREASE": "Increase item count",
+    "DECREASE": "Decrease item count"
+  },
+  "PAYMENT": {
+    "CHECKOUT_TITLE": "Checkout Form",
+    "DETAILS": "Details",
+    "PHONE": "Phone",
+    "CITY": "City",
+    "CASH": "Cash",
+    "ONLINE": "Online"
+  }
+}

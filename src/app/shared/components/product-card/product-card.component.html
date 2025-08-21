@@ -1,0 +1,24 @@
+<div class="p-2 product shadow-sm">
+  <div [routerLink]="['/product', product.id]" class="cursor-pointer">
+    <img
+      [src]="product.imageCover"
+      alt="product image"
+      class="w-100"
+      height="300px"
+    />
+    <h5 class="text-main">{{ product.title | sliceText }}</h5>
+    <h6>{{ product.category.name }}</h6>
+    <div class="d-flex justify-content-between align-items-center">
+      <span class="text-muted">
+        {{ "PRODUCT.PRICE" | translate }}: {{ product.price | currency }}
+      </span>
+      <span class="text-success">
+        {{ product.ratingsAverage }}
+        <i class="fa-solid fa-star text-warning"></i>
+      </span>
+    </div>
+  </div>
+  <button (click)="addToCart(product.id)" class="btn-main my-1 w-100">
+    {{ "PRODUCT.ADD_TO_CART" | translate }}
+  </button>
+</div>

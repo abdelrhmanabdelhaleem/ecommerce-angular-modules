@@ -1,0 +1,9 @@
+.nav-link {
+  transition: unset !important;
+}
+
+.active-link {
+  background-color: $main-color !important;
+  color: $light-color !important;
+  border-radius: 5px;
+}

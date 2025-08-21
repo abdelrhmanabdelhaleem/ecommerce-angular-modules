@@ -1,0 +1,105 @@
+<section>
+  <div
+    *ngIf="cartItems && cartItems.numOfCartItems > 0"
+    class="p-3 mb-5 rounded my-3"
+  >
+    <h4 class="text-center text-main fw-bold">
+      {{ "CART.TITLE" | translate }}
+    </h4>
+    <div class="d-md-flex justify-content-between my-3 align-baseline">
+      <div>
+        <h5>
+          {{ "CART.TOTAL_PRICE" | translate }} :
+          {{ cartItems.data.totalCartPrice | currency }}
+        </h5>
+      </div>
+
+      <div>
+        <button (click)="clearCart()" class="btn btn-outline-danger d-block">
+          {{ "CART.CLEAR" | translate }}
+        </button>
+      </div>
+    </div>
+
+    <div class="shadow-sm p-2">
+      <div
+        *ngFor="let item of cartItems.data.products"
+        class="row justify-content-between align-items-center my-3"
+      >
+        <div class="col-md-6 d-flex align-items-center">
+          <div>
+            <img
+              [src]="item.product.imageCover"
+              alt="product image"
+              class="w-100"
+              height="100px"
+            />
+          </div>
+          <div class="mx-3">
+            <h6 class="text-main">{{ item.product.title | sliceText }}</h6>
+            <h6>{{ item.price | currency }}</h6>
+
+            <i
+              type="button"
+              (click)="removeFromCart(item.product._id)"
+              class="fa-solid fa-trash text-danger"
+            ></i>
+          </div>
+        </div>
+        <div
+          class="col-md-6 d-flex justify-content-center justify-content-md-end"
+        >
+          <div>
+            <button
+              type="button"
+              (click)="
+                upDateCart(item.product._id, (item.count = item.count + 1))
+              "
+              class="btn btn-outline-info p-1 my-1"
+              [title]="'CART.INCREASE' | translate"
+              [attr.aria-label]="'CART.INCREASE' | translate"
+            >
+              <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <span class="m-2">{{ item.count }}</span>
+            <button
+              type="button"
+              (click)="
+                upDateCart(item.product._id, (item.count = item.count - 1))
+              "
+              class="btn btn-outline-info p-1 my-1"
+              [title]="'CART.DECREASE' | translate"
+            >
+              <i class="fa-solid fa-minus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center justify-content-md-end">
+        <button
+          class="btn btn-outline-success d-block my-2"
+          [routerLink]="['/checkout', cartItems.cartId]"
+        >
+          {{ "CART.GO_TO_PAYMENT" | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div
+    *ngIf="
+      !loading.isLoading && (!cartItems || cartItems?.numOfCartItems === 0)
+    "
+    class="p-3 mb-5 rounded my-3"
+  >
+    <h4 class="text-center text-main fw-bold">
+      {{ "CART.EMPTY" | translate }}
+    </h4>
+    <div class="text-center">
+      <a routerLink="/products" class="btn btn-outline-info">
+        {{ "CART.GO_TO_PRODUCTS" | translate }}
+      </a>
+    </div>
+  </div>
+</section>

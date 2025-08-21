@@ -1,0 +1,72 @@
+{
+  "NAV": {
+    "HOME": "الرئيسية",
+    "PRODUCTS": "المنتجات",
+    "CATEGORIES": "الأقسام",
+    "CART": "عربة التسوق",
+    "LANG": "اللغة",
+    "LOGIN": "تسجيل الدخول",
+    "REGISTER": "إنشاء حساب",
+    "LOGOUT": "تسجيل الخروج"
+  },
+
+  "PRODUCT": {
+    "ADD_TO_CART": "أضف إلى السلة",
+    "VIEW_DETAILS": "عرض التفاصيل",
+    "PRICE": "السعر",
+    "QUANTITY": "الكمية",
+    "TOTAL": "الإجمالي",
+    "DESCRIPTION": "الوصف",
+    "REVIEWS": "التقييمات",
+    "POPULAR_PRODUCTS": "المنتجات الشائعة",
+    "SEARCH_PLACEHOLDER": "ابحث عن المنتجات",
+    "NO_PRODUCTS": "لا توجد منتجات."
+  },
+  "AUTH": {
+    "LOGIN": "تسجيل الدخول",
+    "REGISTER": "إنشاء حساب",
+    "LOGOUT": "تسجيل الخروج",
+    "FORGOT_PASSWORD": "نسيت كلمة المرور؟",
+    "RESET_PASSWORD": "إعادة تعيين كلمة المرور",
+    "LOGIN_FORM": "نموذج تسجيل الدخول ",
+    "REGISTER_FORM": "نموذج إنشاء حساب ",
+    "EMAIL": "البريد الإلكتروني",
+    "EMAIL_REQUIRED": "البريد الإلكتروني مطلوب",
+    "EMAIL_INVALID": "أدخل بريد إلكتروني صحيح",
+    "PASSWORD": "كلمة المرور",
+    "PASSWORD_REQUIRED": "كلمة المرور مطلوبة",
+    "PASSWORD_PATTERN": "يجب أن تكون على الأقل 6 أحرف",
+    "NAME": "الاسم",
+    "NAME_REQUIRED": "الاسم مطلوب",
+    "NAME_MIN": "الاسم لا يقل عن 3 أحرف",
+    "NAME_MAX": "الاسم لا يزيد عن 25 حرف",
+    "RE_PASSWORD": "تأكيد كلمة المرور",
+    "PASSWORD_CONFIRM_ERROR": "تأكيد كلمة المرور غير صحيح",
+    "PHONE": "رقم الهاتف",
+    "PHONE_REQUIRED": "رقم الهاتف مطلوب",
+    "PHONE_INVALID": "يُقبل فقط أرقام الهواتف المصرية",
+    "NO_ACCOUNT": "ليس لديك حساب؟",
+    "GO_TO_REGISTER": "اذهب إلى التسجيل",
+    "HAVE_ACCOUNT": "لديك حساب بالفعل؟",
+    "GO_TO_LOGIN": "اذهب إلى تسجيل الدخول"
+  },
+
+  "CART": {
+    "TITLE": "سلة المشتريات",
+    "TOTAL_PRICE": "السعر الإجمالي",
+    "CLEAR": "إفراغ السلة",
+    "EMPTY": "سلة المشتريات فارغة",
+    "GO_TO_PRODUCTS": "اذهب للمنتجات",
+    "GO_TO_PAYMENT": "الانتقال للدفع",
+    "INCREASE": "زيادة الكمية",
+    "DECREASE": "إنقاص الكمية"
+  },
+  "PAYMENT": {
+    "CHECKOUT_TITLE": "نموذج الدفع",
+    "DETAILS": "التفاصيل",
+    "PHONE": "رقم الهاتف",
+    "CITY": "المدينة",
+    "CASH": "دفع نقدي",
+    "ONLINE": "دفع أونلاين"
+  }
+}

@@ -1,0 +1,152 @@
+<section>
+  <div class="shadow my-3 p-2 m-auto section-box">
+    <h1 class="text-main h2">{{ "AUTH.REGISTER_FORM" | translate }}</h1>
+    <form [formGroup]="registerForm" (ngSubmit)="submitRegisterForm()">
+      <div class="my-1">
+        <label for="userName">{{ "AUTH.NAME" | translate }}</label>
+        <input
+          class="form-control"
+          id="userName"
+          type="text"
+          formControlName="name"
+        />
+        <ng-container *ngIf="checkError(registerForm.controls.name)">
+          <p
+            *ngIf="registerForm.get('name')?.hasError('required')"
+            class="text-danger py-1"
+          >
+            {{ "AUTH.NAME_REQUIRED" | translate }}
+          </p>
+          <p
+            *ngIf="registerForm.get('name')?.hasError('minlength')"
+            class="text-danger py-1"
+          >
+            {{ "AUTH.NAME_MIN" | translate }}
+          </p>
+          <p
+            *ngIf="registerForm.get('name')?.hasError('maxlength')"
+            class="text-danger py-1"
+          >
+            {{ "AUTH.NAME_MAX" | translate }}
+          </p>
+        </ng-container>
+      </div>
+
+      <div class="my-1">
+        <label for="userEmail">{{ "AUTH.EMAIL" | translate }}</label>
+        <input
+          class="form-control"
+          id="userEmail"
+          type="email"
+          formControlName="email"
+        />
+        <ng-container *ngIf="checkError(registerForm.get('email'))">
+          <p
+            *ngIf="registerForm.get('email')?.hasError('required')"
+            class="text-danger py-1"
+          >
+            {{ "AUTH.EMAIL_REQUIRED" | translate }}
+          </p>
+          <p
+            *ngIf="registerForm.get('email')?.hasError('email')"
+            class="text-danger py-1"
+          >
+            {{ "AUTH.EMAIL_INVALID" | translate }}
+          </p>
+        </ng-container>
+      </div>
+
+      <div class="my-1">
+        <label for="userPassword">{{ "AUTH.PASSWORD" | translate }}</label>
+        <input
+          class="form-control"
+          id="userPassword"
+          type="password"
+          formControlName="password"
+        />
+        <ng-container *ngIf="checkError(registerForm.get('password'))">
+          <p
+            *ngIf="registerForm.get('password')?.hasError('required')"
+            class="text-danger py-1"
+          >
+            {{ "AUTH.PASSWORD_REQUIRED" | translate }}
+          </p>
+          <p
+            *ngIf="registerForm.get('password')?.hasError('pattern')"
+            class="text-danger py-1"
+          >
+            {{ "AUTH.PASSWORD_PATTERN" | translate }}
+          </p>
+        </ng-container>
+      </div>
+
+      <div class="my-1">
+        <label for="userRePassword">{{ "AUTH.RE_PASSWORD" | translate }}</label>
+        <input
+          class="form-control"
+          id="userRePassword"
+          type="password"
+          formControlName="rePassword"
+        />
+        <p
+          *ngIf="
+            registerForm.hasError('misMatch') &&
+            (registerForm.get('rePassword')?.touched ||
+              registerForm.get('rePassword')?.dirty)
+          "
+          class="text-danger py-1"
+        >
+          {{ "AUTH.PASSWORD_CONFIRM_ERROR" | translate }}
+        </p>
+      </div>
+
+      <div class="my-1">
+        <label for="userPhone">{{ "AUTH.PHONE" | translate }}</label>
+        <input
+          class="form-control"
+          id="userPhone"
+          type="text"
+          formControlName="phone"
+        />
+        <ng-container *ngIf="checkError(registerForm.get('phone'))">
+          <p
+            *ngIf="registerForm.get('phone')?.hasError('required')"
+            class="text-danger py-1"
+          >
+            {{ "AUTH.PHONE_REQUIRED" | translate }}
+          </p>
+          <p
+            *ngIf="registerForm.get('phone')?.hasError('pattern')"
+            class="text-danger py-1"
+          >
+            {{ "AUTH.PHONE_INVALID" | translate }}
+          </p>
+        </ng-container>
+      </div>
+
+      <div class="d-flex justify-content-between align-baseline my-2">
+        <span>
+          {{ "AUTH.HAVE_ACCOUNT" | translate }}
+          <a class="text-primary cursor-pointer" routerLink="/login">
+            {{ "AUTH.GO_TO_LOGIN" | translate }}
+          </a>
+        </span>
+        <button
+          [disabled]="loadingService.isLoading"
+          type="submit"
+          class="btn btn-main"
+        >
+          <span
+            *ngIf="loadingService.isLoading"
+            class="spinner-border spinner-border-sm"
+            role="status"
+            aria-hidden="true"
+          ></span>
+          <span *ngIf="!loadingService.isLoading">{{
+            "AUTH.REGISTER" | translate
+          }}</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

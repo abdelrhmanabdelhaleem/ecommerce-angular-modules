@@ -1,0 +1,79 @@
+<section>
+  <div class="shadow my-3 p-2 m-auto section-box">
+    <h1 class="text-main h2">{{ "AUTH.LOGIN_FORM" | translate }}</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="submitloginForm()">
+      <div class="my-1">
+        <label for="userEmail">{{ "AUTH.EMAIL" | translate }}</label>
+        <input
+          class="form-control"
+          id="userEmail"
+          type="email"
+          formControlName="email"
+        />
+        <ng-container *ngIf="checkError(loginForm.get('email'))">
+          <p
+            *ngIf="loginForm.get('email')?.hasError('required')"
+            class="text-danger py-1"
+          >
+            {{ "AUTH.EMAIL_REQUIRED" | translate }}
+          </p>
+          <p
+            *ngIf="loginForm.get('email')?.hasError('email')"
+            class="text-danger py-1"
+          >
+            {{ "AUTH.EMAIL_INVALID" | translate }}
+          </p>
+        </ng-container>
+      </div>
+
+      <div class="my-1">
+        <label for="userPassword">{{ "AUTH.PASSWORD" | translate }}</label>
+        <input
+          class="form-control"
+          id="userPassword"
+          type="password"
+          formControlName="password"
+        />
+        <ng-container *ngIf="checkError(loginForm.get('password'))">
+          <p
+            *ngIf="loginForm.get('password')?.hasError('required')"
+            class="text-danger py-1"
+          >
+            {{ "AUTH.PASSWORD_REQUIRED" | translate }}
+          </p>
+          <p
+            *ngIf="loginForm.get('password')?.hasError('pattern')"
+            class="text-danger py-1"
+          >
+            {{ "AUTH.PASSWORD_PATTERN" | translate }}
+          </p>
+        </ng-container>
+      </div>
+
+      <div class="d-flex justify-content-between align-baseline my-2">
+        <span>
+          {{ "AUTH.NO_ACCOUNT" | translate }}
+          <a class="text-primary cursor-pointer" routerLink="/register">
+            {{ "AUTH.GO_TO_REGISTER" | translate }}
+          </a>
+        </span>
+
+        <button
+          [disabled]="loadingService.isLoading"
+          type="submit"
+          class="btn btn-main"
+        >
+          <span
+            *ngIf="loadingService.isLoading"
+            class="spinner-border spinner-border-sm"
+            role="status"
+            aria-hidden="true"
+          ></span>
+          <span *ngIf="!loadingService.isLoading">{{
+            "AUTH.LOGIN" | translate
+          }}</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

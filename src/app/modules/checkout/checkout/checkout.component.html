@@ -1,0 +1,53 @@
+<section>
+  <h3 class="text-main my-2 text-center fw-bold">
+    {{ "PAYMENT.CHECKOUT_TITLE" | translate }}
+  </h3>
+  <form
+    [formGroup]="shippingForm"
+    class="p-4 border rounded bg-light my-3 section-box m-auto"
+  >
+    <div class="mb-3">
+      <label for="details" class="form-label">
+        {{ "PAYMENT.DETAILS" | translate }}
+      </label>
+      <input
+        id="details"
+        type="text"
+        class="form-control"
+        formControlName="details"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">
+        {{ "PAYMENT.PHONE" | translate }}
+      </label>
+      <input
+        id="phone"
+        type="text"
+        class="form-control"
+        formControlName="phone"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="city" class="form-label">
+        {{ "PAYMENT.CITY" | translate }}
+      </label>
+      <input
+        id="city"
+        type="text"
+        class="form-control"
+        formControlName="city"
+      />
+    </div>
+    <button (click)="paymentCash()" type="submit" class="btn btn-primary mx-1">
+      {{ "PAYMENT.CASH" | translate }}
+    </button>
+    <button
+      (click)="paymentOnline()"
+      type="submit"
+      class="btn btn-success mx-1"
+    >
+      {{ "PAYMENT.ONLINE" | translate }}
+    </button>
+  </form>
+</section>

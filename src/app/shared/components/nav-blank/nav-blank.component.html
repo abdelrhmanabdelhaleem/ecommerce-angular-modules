@@ -1,0 +1,97 @@
+<nav
+  class="navbar navbar-expand-lg bg-body-tertiary position-sticky top-0 w-100"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand mx-2" routerLink="">
+      <img src="assets/images/freshcart-logo.svg" alt="freshcart-logo" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse justify-content-between"
+      id="navbarNavAltMarkup"
+    >
+      <div class="navbar-nav">
+        <a class="nav-link" routerLink="home" routerLinkActive="active-link">
+          {{ "NAV.HOME" | translate }}
+        </a>
+
+        <a
+          class="nav-link"
+          routerLink="products"
+          routerLinkActive="active-link"
+        >
+          {{ "NAV.PRODUCTS" | translate }}
+        </a>
+
+        <a
+          class="nav-link"
+          routerLink="categories"
+          routerLinkActive="active-link"
+        >
+          {{ "NAV.CATEGORIES" | translate }}
+        </a>
+      </div>
+
+      <div class="navbar-nav">
+        <div class="dropdown mx-2">
+          <a
+            class="btn btn-outline-primary dropdown-toggle d-flex align-items-center gap-2"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fas fa-language"></i>
+            {{ "NAV.LANG" | translate }}
+          </a>
+
+          <ul class="dropdown-menu p-1 shadow">
+            <li
+              class="cursor-pointer d-flex align-items-center gap-2 p-2 rounded"
+              (click)="translationService.useLanguage('ar')"
+              [class.bg-info.text-white]="
+                translationService.getCurrentLang() == 'ar'
+              "
+            >
+              <i class="fas fa-flag"></i>
+              <span>عربي</span>
+            </li>
+            <li
+              class="cursor-pointer d-flex align-items-center gap-2 p-2 rounded"
+              (click)="translationService.useLanguage('en')"
+              [class.bg-info.text-white]="
+                translationService.getCurrentLang() == 'en'
+              "
+            >
+              <i class="fas fa-flag-usa"></i>
+              <span>English</span>
+            </li>
+          </ul>
+        </div>
+
+        <a class="nav-link px-2 d-inline" routerLink="cart">
+          <i class="fa-solid fa-cart-shopping text-main position-relative ms-2">
+            <span
+              class="badge text-dark bg-main text-white position-absolute end-100 bottom-50 px-1"
+            >
+              {{ cartService.countCart$ | async }}
+            </span>
+          </i>
+        </a>
+
+        <a (click)="authService.signout()" class="nav-link cursor-pointer">
+          {{ "NAV.LOGOUT" | translate }}
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
