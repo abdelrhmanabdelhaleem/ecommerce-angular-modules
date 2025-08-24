@@ -22,7 +22,6 @@ export class CartComponent {
   getCartItems() {
     this.cartService.getCart().subscribe({
       next: (res) => {
-        console.log('🚀 ~ CartComponent ~ getCartItems ~ res:', res);
         this.cartItems = res;
         this.cartService.countCart$.next(res.numOfCartItems);
       },

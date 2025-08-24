@@ -1,15 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SliceTextPipe } from 'src/app/shared/pipes/slice-text.pipe';
-import { WishListComponent } from './wish-list/wish-list.component';
 import { TranslatePipe } from '@ngx-translate/core';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { WishListComponent } from './wish-list/wish-list.component';
 
 const routes: Routes = [{ path: '', component: WishListComponent }];
 
 @NgModule({
-  declarations: [WishListComponent, SliceTextPipe],
-  imports: [CommonModule, RouterModule.forChild(routes), TranslatePipe],
+  declarations: [WishListComponent],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    TranslatePipe,
+    SharedModule,
+  ],
   exports: [RouterModule],
 })
 export class WishListModule {}

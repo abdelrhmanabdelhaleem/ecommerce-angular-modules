@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { jwtDecode } from 'jwt-decode';
+import { IUser } from '../models/auth/iuser';
 
 @Injectable({
   providedIn: 'root',
@@ -22,7 +23,7 @@ export class SecurityService {
   isLogged(): boolean {
     return this.getToken() !== null;
   }
-  getUserData(): any {
+  getUserData(): IUser | null {
     const token = this.getToken();
     if (token) {
       return jwtDecode(token);

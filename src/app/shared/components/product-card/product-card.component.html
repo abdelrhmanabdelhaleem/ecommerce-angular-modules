@@ -1,17 +1,22 @@
 <div class="p-2 product shadow-sm">
   <div class="cursor-pointer position-relative">
-    <i
+    <div
+      class="position-absolute top-0 end-0 bg-secondary rounded-circle d-flex justify-content-center align-items-center"
+      style="width: 35px; height: 35px; cursor: pointer"
       (click)="
         wishListService.isInWishList(product.id)
           ? removeFromWishList(product.id)
           : addToWishList(product.id)
       "
-      [class]="
-        wishListService.isInWishList(product.id)
-          ? 'fa-solid fa-heart text-danger position-absolute top-0 end-0 fs-4'
-          : 'fa-regular fa-heart position-absolute top-0 end-0 fs-4'
-      "
-    ></i>
+    >
+      <i
+        [class]="
+          wishListService.isInWishList(product.id)
+            ? 'fa-solid fa-heart text-danger fs-5'
+            : 'fa-regular fa-heart text-white fs-5'
+        "
+      ></i>
+    </div>
     <div [routerLink]="['/product', product.id]">
       <img
         [src]="product.imageCover"

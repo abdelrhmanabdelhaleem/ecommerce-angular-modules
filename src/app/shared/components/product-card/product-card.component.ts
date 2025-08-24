@@ -22,7 +22,6 @@ export class ProductCardComponent {
   }
   addToWishList(productId: string | null) {
     this.wishListService.addToWishList(productId).subscribe((res) => {
-      // this.cartService.countCart$.next(res.numOfCartItems);
       this.wishListService.wishListIdS = res.data;
       this.toastrService.success('Product added to wishlist successfully');
     });
