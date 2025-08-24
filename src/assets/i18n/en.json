@@ -5,8 +5,9 @@
     "CATEGORIES": "Categories",
     "CART": "Cart",
     "LANG": "Lang",
-    "LOGIN": "تسجيل الدخول",
-    "REGISTER": "إنشاء حساب",
+    "LOGIN": "Login",
+    "REGISTER": "Register",
+    "ORDERS": "Orders",
     "LOGOUT": "Sign Out"
   },
 
@@ -51,6 +52,7 @@
     "HAVE_ACCOUNT": "Already have an account?",
     "GO_TO_LOGIN": "Go to Login"
   },
+
   "CART": {
     "TITLE": "Your Cart",
     "TOTAL_PRICE": "Total Price",
@@ -61,6 +63,7 @@
     "INCREASE": "Increase item count",
     "DECREASE": "Decrease item count"
   },
+
   "PAYMENT": {
     "CHECKOUT_TITLE": "Checkout Form",
     "DETAILS": "Details",
@@ -69,10 +72,33 @@
     "CASH": "Cash",
     "ONLINE": "Online"
   },
+
   "WISHLIST": {
     "TITLE": "Wish List",
     "EMPTY": "Your Wish List is Empty",
     "GO_TO_PRODUCTS": "Go to Products",
     "REMOVE_ITEM": "Remove Item"
+  },
+
+  "ORDERS": {
+    "TITLE": "My Orders",
+    "NO_ORDERS": "No orders found.",
+    "ORDER": "Order",
+    "CUSTOMER": "Customer",
+    "SHIPPING": "Shipping",
+    "STATUS": "Status",
+    "PAID": "Paid",
+    "PENDING": "Pending",
+    "DELIVERED": "Delivered",
+    "NOT_DELIVERED": "Not Delivered",
+    "TOTAL_PRICE": "Total Price",
+    "CREATED_AT": "Created At",
+    "PRODUCTS": "Products",
+    "IMAGE": "Image",
+    "TITLE_LABEL": "Title",
+    "BRAND": "Brand",
+    "CATEGORY": "Category",
+    "QUANTITY": "Quantity",
+    "PRICE": "Price"
   }
 }

@@ -7,7 +7,8 @@
     "LANG": "اللغة",
     "LOGIN": "تسجيل الدخول",
     "REGISTER": "إنشاء حساب",
-    "LOGOUT": "تسجيل الخروج"
+    "LOGOUT": "تسجيل الخروج",
+    "ORDERS": "الطلبات"
   },
 
   "PRODUCT": {
@@ -22,14 +23,15 @@
     "SEARCH_PLACEHOLDER": "ابحث عن المنتجات",
     "NO_PRODUCTS": "لا توجد منتجات."
   },
+
   "AUTH": {
     "LOGIN": "تسجيل الدخول",
     "REGISTER": "إنشاء حساب",
     "LOGOUT": "تسجيل الخروج",
     "FORGOT_PASSWORD": "نسيت كلمة المرور؟",
     "RESET_PASSWORD": "إعادة تعيين كلمة المرور",
-    "LOGIN_FORM": "نموذج تسجيل الدخول ",
-    "REGISTER_FORM": "نموذج إنشاء حساب ",
+    "LOGIN_FORM": "نموذج تسجيل الدخول",
+    "REGISTER_FORM": "نموذج إنشاء حساب",
     "EMAIL": "البريد الإلكتروني",
     "EMAIL_REQUIRED": "البريد الإلكتروني مطلوب",
     "EMAIL_INVALID": "أدخل بريد إلكتروني صحيح",
@@ -61,6 +63,7 @@
     "INCREASE": "زيادة الكمية",
     "DECREASE": "إنقاص الكمية"
   },
+
   "PAYMENT": {
     "CHECKOUT_TITLE": "نموذج الدفع",
     "DETAILS": "التفاصيل",
@@ -69,10 +72,33 @@
     "CASH": "دفع نقدي",
     "ONLINE": "دفع أونلاين"
   },
+
   "WISHLIST": {
     "TITLE": "قائمة الرغبات",
     "EMPTY": "قائمة الرغبات فارغة",
     "GO_TO_PRODUCTS": "اذهب للمنتجات",
     "REMOVE_ITEM": "إزالة العنصر"
+  },
+
+  "ORDERS": {
+    "TITLE": "طلباتي",
+    "NO_ORDERS": "لا توجد طلبات حتى الآن.",
+    "ORDER_NUMBER": "رقم الطلب",
+    "CUSTOMER": "العميل",
+    "SHIPPING": "العنوان",
+    "STATUS": "الحالة",
+    "PAID": "مدفوع",
+    "PENDING": "قيد الانتظار",
+    "DELIVERED": "تم التوصيل",
+    "NOT_DELIVERED": "لم يتم التوصيل",
+    "TOTAL_PRICE": "إجمالي السعر",
+    "CREATED_AT": "تاريخ الإنشاء",
+    "PRODUCTS": "المنتجات",
+    "IMAGE": "الصورة",
+    "TITLE_PRODUCT": "اسم المنتج",
+    "BRAND": "العلامة التجارية",
+    "CATEGORY": "الفئة",
+    "QUANTITY": "الكمية",
+    "PRICE": "السعر"
   }
 }
